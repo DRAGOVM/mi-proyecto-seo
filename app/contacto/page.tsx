@@ -1,8 +1,35 @@
 import type { Metadata } from "next";
+import { siteConfig } from "../../lib/site";
 
 export const metadata: Metadata = {
-  title: "Contacto",
-  description: "Página de contacto del proyecto de optimización SEO en Next.js.",
+  title: "Contacto y soporte SEO",
+  description:
+    "Página de contacto del proyecto de optimización SEO en Next.js con metadatos orientados a indexación.",
+  alternates: {
+    canonical: "/contacto",
+  },
+  openGraph: {
+    title: "Contacto y soporte SEO",
+    description:
+      "Página de contacto del proyecto de optimización SEO en Next.js con metadatos orientados a indexación.",
+    url: `${siteConfig.url}/contacto`,
+    type: "website",
+    images: [
+      {
+        url: "/images/seo-image.jpg",
+        width: 1366,
+        height: 768,
+        alt: "Contacto del proyecto SEO",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contacto y soporte SEO",
+    description:
+      "Página de contacto del proyecto de optimización SEO en Next.js con metadatos orientados a indexación.",
+    images: ["/images/seo-image.jpg"],
+  },
 };
 
 export default function ContactPage() {
